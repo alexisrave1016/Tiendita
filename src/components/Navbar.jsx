@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from './Disenos'
+import { Button, LinkRuta } from './Disenos'
 
 
 
@@ -13,9 +13,14 @@ export const Navbar = () => {
                 <div className="ubicacion_carrito">
                     <div className="ubicacion">
                         <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
-                      <h5> México City Marriott Reforma Hotel...</h5>
-                      
+                        <h5> México City Marriott Reforma Hotel...</h5>
                     </div>
+                    <LinkRuta to="/login">
+                    <div className="perfil_login">
+                        <img  className="img_logo" src="perfil.png" alt="no disponible" srcset="" />
+                        <h5>Registro / Ingresa</h5>
+                    </div>
+                    </LinkRuta>
                     <div className="carrito">
                         <div className="carrito_logo">
                             <img className="img_logo" src="carrito-de-compras.png" alt="no disponible" srcset="" />

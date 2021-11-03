@@ -1,5 +1,7 @@
 import React from 'react'
-import {loca} from '@fortawesome/free-solid-svg-icons'
+import { Button } from './Disenos'
+
+
 
 export const Navbar = () => {
     return (
@@ -10,19 +12,19 @@ export const Navbar = () => {
                 </div>
                 <div className="ubicacion_carrito">
                     <div className="ubicacion">
-                        <img src="placeholder.png" alt="no disponible" srcset="" />
-                      <h5>Ubicacion actual</h5>
+                        <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
+                      <h5> México City Marriott Reforma Hotel...</h5>
                       
                     </div>
                     <div className="carrito">
                         <div className="carrito_logo">
-                            <img src="carrito-de-compras.png" alt="no disponible" srcset="" />
+                            <img className="img_logo" src="carrito-de-compras.png" alt="no disponible" srcset="" />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="Navbar_inferior">
-                <img src="Banner.png" alt="" srcset="" />
+                <img className="banner" src="Banner.png" alt="" srcset="" />
             </div>
 
             

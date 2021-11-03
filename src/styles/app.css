@@ -1,0 +1,47 @@
+.App-containers{
+    background-color: #f7f7f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+.productos_container{
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px white;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.productos_pintar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+ 
+    
+}
+.container_card{
+    width: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    
+}
+.card_productos{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.contenido_productos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,70 @@
+body{  min-height: 100vh;
+
+    background: radial-gradient(circle at 0 0, #e7f603,#59c3e0);
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.Navbar_container{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+    background:#fafaf8;
+    width:1000px;
+    
+}
+.titulo{
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.titulo h4{
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    color: #fb452d;
+}
+.navbar_superior{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    border-radius: 3px;
+    margin: auto;
+}
+.ubicacion_carrito{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+.img_logo{
+    width: 20px;
+    height: 20px;
+}
+.Navbar_inferior{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.banner{
+    width: 90%;
+}
+.ubicacion{
+    display: flex;
+    align-items: center;
+}
+.carrito{
+    width: 60px;
+    height: 30px;
+    background-color: #0ac763;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+
+}

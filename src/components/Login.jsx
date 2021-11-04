@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from '../hooks/useForm'
 import { LinkRuta } from './Disenos'
 import { useDispatch } from 'react-redux'
-import { loginSincrono } from '../actions/actionLogin'
+import { loginEmailPassword } from '../actions/actionLogin'
 import { loginGoogle, loginFacebook } from '../actions/actionLogin'
 
 
@@ -18,7 +18,7 @@ const Login = () => {
 
     const handleLogin= (e)=>{
         e.preventDefault();
-        dispatch(loginSincrono(email,password))
+        dispatch(loginEmailPassword(email,password))
     }
 
     const handleGoogle= () =>{

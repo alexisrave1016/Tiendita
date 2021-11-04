@@ -5,11 +5,13 @@ import './styles/app.css'
 import './styles/login.css'
 import './styles/registro.css'
 import AppRouters from './router/AppRouters';
+import {Provider} from 'react-redux'
+import {store} from './store/store'
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
   <AppRouters />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );

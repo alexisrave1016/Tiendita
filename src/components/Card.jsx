@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from './Disenos'
 import Modal from '../components/Modal'
 import { useModal } from '../hooks/useModal'
+import '../styles/modalPintar.css'
 
 const Card = (props) => {
 
@@ -26,13 +27,44 @@ const Card = (props) => {
                 <div className="contenido_productos">
               <span>$ {Precio}</span> 
               <span>{Producto}</span> 
-              <Button>Agregar</Button>
+              <Button onClick={openModal}>Agregar</Button>
               </div>
             </div>
-            <button onClick={openModal}></button>
+            
             <Modal isOpen={isOpenModal} closeModal={closeModal}>
-                <h3>hola modal</h3>
-                <img src="Tiendita.png" alt="no disponible" srcset="" />
+                <div className="modalContainerTotal">
+                    <div className="modalProductoSeleccionado">
+                        <div className="modalImagenProducto">
+                            <img className="imagenProducto" src={Imagen} alt="no disponible" srcset="" />
+                        </div>
+                        <div className="modalDescripcion">
+                            <h5 className="tituloProducto">{Producto}</h5>
+                            <span className="tituloPrecio">$ {Precio}</span>
+                            <span className="iva">precio con iva incluido</span>
+                            <p className="descripcionProducto">{Descripcion}</p>
+                            <div className="modalSeleccionCaracteristicas">
+                                <span className="titulo_selecion">Selecciona la madurez que deseas</span>
+                                <select className="selecionDeseada" name="madurez">
+                                    <option value="titulo">Por elegir</option>
+                                    <option value="valor1">Maduro (Para hoy)</option>
+                                    <option value="valor2">Normal (3-5 días)</option>
+                                    <option value="valor3">Verde (7 días)</option>
+                                </select>
+                                <div className="modal_botones_agregar">
+                                <button className="botonModificar">- 250 g + </button> 
+                                <Button>Agregar</Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal_productos_relacionados">
+                        <h5>Productos Relacionados</h5>
+
+
+
+                    </div>
+
+                </div>
             </Modal>
           
         </div>

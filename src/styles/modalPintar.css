@@ -1,0 +1,67 @@
+.modalContainerTotal{
+    display: flex;
+    flex-direction: column;
+}
+.modalProductoSeleccionado{
+    display: flex;
+    justify-content: space-evenly;
+}
+.modalDescripcion{
+    display: flex;
+    flex-direction: column;
+}
+.modalSeleccionCaracteristicas{
+    display: flex;
+    flex-direction: column;
+}
+.modalImagenProducto{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* revisar esto bien */
+}
+.tituloProducto{
+    font-size: 25px;
+}
+.tituloPrecio{
+    font-size: 18px;
+    font-weight: 600;
+}
+.iva{
+    font-size: 12px;
+}
+.descripcionProducto{
+    font-size: 15px;
+    font-weight: 100;
+}
+.titulo_selecion{
+    font-weight: 900;
+}
+.selecionDeseada{
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.botonModificar{
+    background: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 3px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width:160px;
+    height:44px;
+    color:black;
+    font-weight:lighter;
+}
+.modal_botones_agregar{
+    display: flex;
+    justify-content: space-between;
+}
+.imagenProducto{
+    width: 250px;
+    height: 250px;
+}

@@ -20,7 +20,7 @@ export const loginEmailPassword= (email,password)=>{
             }
             )
         
-            
+            window.location.href = "./";
         })
         .catch(e=>{
             console.log(e)

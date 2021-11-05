@@ -11,6 +11,10 @@ const Card = (props) => {
         Precio,
         Imagen
         }=props.card
+           //modal
+
+    
+   
     return (
         <div className="container_card">
             <div className="card_productos">
@@ -23,7 +27,7 @@ const Card = (props) => {
               <Button>Agregar</Button>
               </div>
             </div>
-            
+          
         </div>
     )
 }

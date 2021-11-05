@@ -1,5 +1,7 @@
 import React from 'react'
 import { Button } from './Disenos'
+import Modal from '../components/Modal'
+import { useModal } from '../hooks/useModal'
 
 const Card = (props) => {
 
@@ -13,7 +15,7 @@ const Card = (props) => {
         }=props.card
            //modal
 
-    
+    const [isOpenModal,openModal,closeModal]= useModal(false)
    
     return (
         <div className="container_card">
@@ -27,6 +29,11 @@ const Card = (props) => {
               <Button>Agregar</Button>
               </div>
             </div>
+            <button onClick={openModal}></button>
+            <Modal isOpen={isOpenModal} closeModal={closeModal}>
+                <h3>hola modal</h3>
+                <img src="Tiendita.png" alt="no disponible" srcset="" />
+            </Modal>
           
         </div>
     )

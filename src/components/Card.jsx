@@ -68,11 +68,12 @@ const Card = (props) => {
                     </div>
                     <div className="modal_productos_relacionados">
                         <h5>Productos Relacionados</h5>
-                        {Tipo=='Fruta'
-                        ?<ProductoRelacionadoviveres/>
-                        :<ProdutoRelacionadoFrutas/>
-                    }
-
+                        <div className="productosRelacionasdosMostrar">
+                        {/* {Tipo=='Fruta'
+                        ?<ProdutoRelacionadoFrutas/>
+                        :<ProductoRelacionadoviveres/>
+                        } */}
+                        </div>
                     </div>
 
                 </div>

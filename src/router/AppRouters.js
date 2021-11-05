@@ -2,20 +2,37 @@ import {
     HashRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import Login from "../components/Login";
 import { Registro } from "../components/Registro";
 import { App } from "../containers/App";
+import { DashboardRouter } from "./DashboardRouter";
+import { PrivateRouter } from "./PrivateRouter";
+import { PublicRouter } from "./PublicRouter";
 
 const AppRouters = () => {
-
     return (
             <Router>
                 <Switch>
-                    <Route exact path="/"   component={App} />
-                    <Route exact path="/login"   component={Login} />
-                    <Route exact path="/registro"   component={Registro} />
+                    <PublicRouter 
+                    exact
+                    path="/portada" 
+                    component={App} />
+
+                    <PublicRouter 
+                    exact
+                    path="/login"   
+                    component={Login} />
+
+                    <PublicRouter
+                    exact
+                    path="/registro"   
+                    component={Registro} />
+
+                    <PrivateRouter 
+                    path="/" 
+                    component={DashboardRouter}/>
+                    
                 </Switch>
             </Router>
     )

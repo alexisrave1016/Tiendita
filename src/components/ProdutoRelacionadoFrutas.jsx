@@ -21,7 +21,7 @@ export const ProdutoRelacionadoFrutas = () => {
 
     return (
         <div>
-             <div className="productos_pintar">
+             <div className="productos_pintar_frutas">
                 {
                     frutas.map(item=>(
                         <Card 

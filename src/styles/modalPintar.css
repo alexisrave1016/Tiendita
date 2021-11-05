@@ -69,3 +69,12 @@
     display: flex;
     flex-direction: column;
 }
+.modal_productos_relacionados{
+    display: flex;
+    flex-direction: column;
+
+}
+.productosRelacionasdosMostrar{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -33,7 +33,7 @@ const Login = () => {
         <form>
             <div className="container-login">
                 <div className="login_logo">
-                   <LinkRuta to="/"><img src="Tiendita.png" alt="" srcset="" /></LinkRuta> 
+                   <LinkRuta to="/portada"><img src="Tiendita.png" alt="" srcset="" /></LinkRuta> 
                 </div>
                <div className="login">
                     <div className="login_container">

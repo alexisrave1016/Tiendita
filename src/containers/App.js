@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect} from 'react'
 import Card from '../components/Card'
+import { Button, LinkRuta } from '../components/Disenos'
 import { Navbar } from '../components/Navbar'
 
 
@@ -55,7 +56,7 @@ export const App = () => {
             </div>
              
         </div>
-   
+        <LinkRuta to="/crudProducto"><Button>Agragar Producto</Button></LinkRuta>    
         </div>
     )
 }

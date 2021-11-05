@@ -3,6 +3,8 @@ import { Button } from './Disenos'
 import Modal from '../components/Modal'
 import { useModal } from '../hooks/useModal'
 import '../styles/modalPintar.css'
+import { ProductoRelacionadoviveres } from './ProductoRelacionadoviveres'
+import { ProdutoRelacionadoFrutas } from './ProdutoRelacionadoFrutas'
 
 const Card = (props) => {
 
@@ -66,7 +68,10 @@ const Card = (props) => {
                     </div>
                     <div className="modal_productos_relacionados">
                         <h5>Productos Relacionados</h5>
-                      {}
+                        {Tipo=='Fruta'
+                        ?<ProductoRelacionadoviveres/>
+                        :<ProdutoRelacionadoFrutas/>
+                    }
 
                     </div>
 

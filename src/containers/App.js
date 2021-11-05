@@ -6,6 +6,8 @@ import { Navbar } from '../components/Navbar'
 
 
 
+
+
 const url='https://api-alexisrave-anime.herokuapp.com/tienda'
 
 export const App = () => {
@@ -53,6 +55,7 @@ export const App = () => {
             </div>
              
         </div>
+   
         </div>
     )
 }

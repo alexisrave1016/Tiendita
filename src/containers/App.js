@@ -27,14 +27,14 @@ export const App = () => {
        peticionesGet()
     }, [])
 
- //modal
+
 
  
 
 
     return (
         <div className="App-containers">
-            <Navbar/>
+            {/* <Navbar/> */}
             
             <div className="productos_container">
 
@@ -48,6 +48,7 @@ export const App = () => {
                     productos.map(item=>(
                         <Card 
                         key={item.titulo}
+                        productos={productos}
                         card={item}
                         />
                     ))
@@ -56,7 +57,7 @@ export const App = () => {
             </div>
              
         </div>
-        <LinkRuta to="/crudProducto"><Button>Agragar Producto</Button></LinkRuta>    
+        {/* <LinkRuta to="/crudProducto"><Button>Agragar Producto</Button></LinkRuta>     */}
         </div>
     )
 }

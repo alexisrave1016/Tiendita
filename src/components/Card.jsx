@@ -14,12 +14,15 @@ const Card = (props) => {
         Descripcion,
         Tipo,
         Precio,
-        Imagen
+        Imagen,
         }=props.card
-           //modal
+
+    const{
+        productos
+    }=props
 
     const [isOpenModal,openModal,closeModal]= useModal(false)
-   
+    
     return (
         <div className="container_card">
             <div className="card_productos">
@@ -69,10 +72,18 @@ const Card = (props) => {
                     <div className="modal_productos_relacionados">
                         <h5>Productos Relacionados</h5>
                         <div className="productosRelacionasdosMostrar">
-                        {/* {Tipo=='Fruta'
-                        ?<ProdutoRelacionadoFrutas/>
-                        :<ProductoRelacionadoviveres/>
-                        } */}
+                        {
+                        productos?.length >0 && (
+                            <ProdutoRelacionadoFrutas 
+                            productosTipo={productos.filter((producto)=>
+                                producto.Tipo===Tipo && producto.id!==id
+                            )}
+                            />
+
+                        )
+                       
+                        
+                        }
                         </div>
                     </div>
 

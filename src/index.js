@@ -7,11 +7,12 @@ import './styles/registro.css'
 import AppRouters from './router/AppRouters';
 import {Provider} from 'react-redux'
 import {store} from './store/store'
+import { App } from './containers/App';
 
 
 ReactDOM.render(
   <Provider store={store}>
-  <AppRouters />
+  <App />
   </Provider>,
   document.getElementById('root')
 );

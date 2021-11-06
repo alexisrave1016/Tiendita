@@ -1,9 +1,31 @@
 import React from 'react'
-import { Button, LinkRuta } from './Disenos'
+import { LinkRuta } from './Disenos'
+import { useDispatch, useSelector } from 'react-redux'
+import { useState, useEffect } from 'react'
+import { getAuth, onAuthStateChanged } from '@firebase/auth'
+
 
 
 
 export const Navbar = () => {
+    const dispatch = useDispatch()
+    const [isLoggedIn, setIsLoggedIn] = useState(true)
+    const [open, setOpen] = useState(false)
+
+    
+    useEffect(() => {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if (user?.uid) {
+                setIsLoggedIn(true);
+            } else {
+                setIsLoggedIn(false);
+            }
+
+        });
+    }, [setIsLoggedIn])
+
+
     return (
         <div className="Navbar_container">
             <div className="navbar_superior">
@@ -15,7 +37,7 @@ export const Navbar = () => {
                         <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
                         <h5> México City Marriott Reforma Hotel...</h5>
                     </div>
-                    <LinkRuta to="/login">
+                    <LinkRuta to="/login" hidden={isLoggedIn ?true:false}>
                     <div className="perfil_login">
                         <img  className="img_logo" src="perfil.png" alt="no disponible" srcset="" />
                         <h5>Registro / Ingresa</h5>

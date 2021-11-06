@@ -1,6 +1,16 @@
 import React from 'react'
+import { Button } from './Disenos'
+import { useDispatch } from 'react-redux'
+import { logout } from '../actions/actionLogin'
 
-export const Productos = () => {
+export const Productos = ({history}) => {
+
+    const dispatch = useDispatch()
+    const handleLogout=()=>{
+        dispatch(logout())
+        history.replace('./login')
+    }
+
     return (
         <div>
             <form >
@@ -36,6 +46,7 @@ export const Productos = () => {
                         <button className="btn btn-primary" type="button"
                        >Guardar</button>
                     </div>
+                <Button onClick={handleLogout}>Cerrar sesion</Button>
  
                 </div>
             </form>

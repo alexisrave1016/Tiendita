@@ -12,7 +12,7 @@ import { App } from './containers/App';
 
 ReactDOM.render(
   <Provider store={store}>
-  <App />
+  <AppRouters/>
   </Provider>,
   document.getElementById('root')
 );

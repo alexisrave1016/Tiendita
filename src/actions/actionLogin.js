@@ -1,8 +1,28 @@
 import { types } from "../types/types";
-import {getAuth, signInWithPopup, signInWithEmailAndPassword} from 'firebase/auth'
+import {getAuth, signInWithPopup, signInWithEmailAndPassword, signOut} from 'firebase/auth'
 import { google,facebook} from "../firebase/firebaseConfig";
 import Swal from "sweetalert2";
 
+//logou - cerrar sesion
+
+export const logout= () =>{
+    return(dispatch)=>{
+        const auth= getAuth();
+        signOut(auth)
+        .then(resp=>{
+            dispatch(logoutSincrono())
+        })
+        .catch(e=>{
+            console.log(e);
+        })
+    }
+}
+
+export const logoutSincrono=()=>{
+    return{
+        type: types.logout
+    }
+}
 
 export const loginEmailPassword= (email,password)=>{
     return(dispatch)=>{
@@ -20,13 +40,13 @@ export const loginEmailPassword= (email,password)=>{
             }
             )
         
-            window.location.href = "./";
+            // window.location.href = "./";
         })
         .catch(e=>{
             console.log(e)
             console.log('el usuario no existe')
             Swal.fire(
-                { title:`${email}` ,
+                { title:`${email}`,
                  text: 'No esta registrado, o la contraseña es incorrecta',
                  icon: 'error',
                  confirmButtonText:'Confirmar'

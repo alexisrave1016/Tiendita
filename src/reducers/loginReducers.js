@@ -9,6 +9,9 @@ export const loginReducers= (state={},action)=>{
                 name: action.payload.displayname,
                 photo: action.payload.photo
             }
+
+        case types.logout: 
+            return{}
             
         
     

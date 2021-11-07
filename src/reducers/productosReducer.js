@@ -13,7 +13,7 @@ export const productosReducer= (state= initialState, action) => {
             }
         case typesProductos.list:
             return{
-                productos: {...action.payload}
+                productos: [...action.payload]
             }   
     
         default:

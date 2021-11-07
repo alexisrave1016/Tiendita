@@ -24,22 +24,25 @@ export const ListarProductos = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {
-                      (productos)
-                      ?(productos.map((elem,index)=>(
-                          <tr key={index}>
-                              <td>{elem.prod}</td>
-                              <td>{elem.desc}</td>
-                              <td>{elem.pre}</td>
-                              <td>{elem.cant}</td>
-                              <td><img src={elem.img} alt="no disponible" srcset="" /></td>
-                          </tr>
-                      )))
-                      :<h5>Datos no disponible</h5>
-                } 
-               
+                { console.log('soy map primero',productos)}
+                        {
+                        
+                        (productos)?
+                        (productos.map((elem,index) => (
+                            <tr key={index}>
+                                <td>{elem.prod}</td>
+                                <td>{elem.desc}</td>
+                                <td>{elem.pre}</td>
+                                <td>{elem.cant}</td>
+                                <td><img src={elem.img} alt="no disponible" width='50px' /></td>
+                                <button>Eliminar</button>
+                            </tr>
+                        )))
+                        :<h5>Datos no disponible</h5>
+                        } 
+                       { console.log('soy map segundo',productos)}
                 </tbody>
             </Table>
-        </div>
+        </div>  
     )
 }

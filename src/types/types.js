@@ -6,5 +6,7 @@ export const types={
 
 export const typesProductos= {
     register: 'register',
-    list:'list'
+    list:'list',
+    eliminar: 'eliminar',
+    edit: 'edit'
 }

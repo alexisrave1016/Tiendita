@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState} from 'react'
 import { Button } from './Disenos'
 import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'
 import { useForm } from '../hooks/useForm'
 import { fileUpload } from '../helpers/FileUpload'
-import { listProducto, registerProducto } from '../actions/actionProducto'
+import { editarProductoSincrono, listProducto, registerProducto } from '../actions/actionProducto'
 import { ListarProductos } from './ListarProductos'
 
 export const Productos = ({history}) => {
 
     const dispatch = useDispatch()
+    
 
-    const [ values, handleInputChange, reset ] = useForm({
+    const [ values, handleInputChange, reset] = useForm({
+        id:'',
         producto:'',
         descripcion:'',
         precio:'',
@@ -19,11 +21,13 @@ export const Productos = ({history}) => {
         imagen:''
     })
 
-    let{producto,descripcion,precio,cantidad,imagen}= values;
+    let{id,producto,descripcion,precio,cantidad,imagen}= values;
+
+   
 
     const handleRegistro=(e)=>{
         e.preventDefault();
-        dispatch(registerProducto(producto,descripcion,precio,cantidad,imagen));
+        dispatch(registerProducto(id,producto,descripcion,precio,cantidad,imagen));
         reset();
 
     }
@@ -59,6 +63,16 @@ export const Productos = ({history}) => {
             <form onSubmit={handleRegistro}>
                 <h1>Producto</h1>
                 <div className="form-group">
+                <div className="form-group col-md-4">
+                        <label htmlFor="nombres">Codigo Producto</label>
+                        <input className="form-control" 
+                        type="text" 
+                        name="id" 
+                        id="id" 
+                        value={id}
+                        onChange={handleInputChange}
+                        />
+                    </div>
                     <div className="form-group col-md-4">
                         <label htmlFor="nombres">Nombres</label>
                         <input className="form-control" 
@@ -115,10 +129,9 @@ export const Productos = ({history}) => {
                     <button className="btn btn-success" type="submit">Guardar</button>
  
                     <div>
-                        <button className="btn btn-primary" type="button"
-                       > atras</button>
+                        <button className="btn btn-primary" type="button"> atras</button>
                     </div>
-                <Button onClick={handleLogout}>Cerrar sesion</Button>
+                <Button>Cerrar sesion</Button>
  
                 </div>
             </form>

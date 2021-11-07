@@ -1,7 +1,16 @@
 import { typesProductos } from "../types/types";
 
 const initialState= {
-    productos:[]
+    productos:[],
+    editarProducto:{
+        id:'',
+        prod:'',
+        desc:'',
+        pre:'',
+        cant:'',
+        img:''
+
+    }
 }
 
 export const productosReducer= (state= initialState, action) => {
@@ -14,7 +23,17 @@ export const productosReducer= (state= initialState, action) => {
         case typesProductos.list:
             return{
                 productos: [...action.payload]
-            }   
+            }  
+        case typesProductos.eliminar:
+            return{
+                productos: state.productos.filter(prod => prod.id !== action.payload)
+                }   
+        case typesProductos.edit:
+            return {
+                ...state, //mirar si
+                productos: [action.payload]
+
+                }            
     
         default:
             return state

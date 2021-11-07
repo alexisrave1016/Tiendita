@@ -3,3 +3,8 @@ export const types={
     register:'register',
     logout: 'logout'
 }
+
+export const typesProductos= {
+    register: 'register',
+    list:'list'
+}

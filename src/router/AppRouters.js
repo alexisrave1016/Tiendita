@@ -34,12 +34,12 @@ const AppRouters = () => {
     }, [dispatch, setChecking, setIsLoggedIn])
     if(checking){
         return(
-            // <div className="swal2-loading">
-            //     <h1>Espere ...</h1>
-            // <img src="loading.png" alt="no disponible" />
-            // </div>
+            <div className="swal2-loading">
+                <h1>Espere ...</h1>
+            <img src="loading.png" alt="no disponible" />
+            </div>
             
-            <h1>Espere por Favor</h1>
+            // <h1>Espere por Favor</h1>
         )
     }
     return (

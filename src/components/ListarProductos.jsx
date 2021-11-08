@@ -9,7 +9,7 @@ import { Button } from './Disenos';
  
 export const ListarProductos = () => {
     const dispatch = useDispatch()
-    const [editForm,setEditForm]=useState(false)
+    const [,setEditForm]=useState(false)
     const [values, setValues] = useForm({
         id:'',
         producto:'',

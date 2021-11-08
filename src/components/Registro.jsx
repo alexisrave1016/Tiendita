@@ -2,16 +2,14 @@ import React from 'react'
 import { Form, Button} from 'react-bootstrap';
 import { LinkRuta } from './Disenos';
 import { useForm } from '../hooks/useForm';
-import { useDispatch } from 'react-redux';
-import { registroEmailPasswordNombre } from '../actions/actionRegister';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useHistory } from "react-router-dom";
 import Swal from 'sweetalert2';
 
 export const Registro = () => {
 
     let history = useHistory();
-    const dispatch = useDispatch()
+
 
     const [ values, handleInputChange]= useForm({
         nombre:'alexis',

@@ -11,7 +11,6 @@ import { PublicRouter } from "./PublicRouter";
 import React, { useState } from "react";
 import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import { useDispatch } from "react-redux";
-import { loginEmailPassword } from "../actions/actionLogin";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
 

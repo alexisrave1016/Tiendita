@@ -46,7 +46,7 @@ const Card = (props) => {
                             <span className="tituloPrecio">$ {Precio}</span>
                             <span className="iva">precio con iva incluido</span>
                             <p className="descripcionProducto">{Descripcion}</p>
-                            {Tipo=='Fruta'
+                            {Tipo==='Fruta'
                                 ? <div className="modalSeleccionCaracteristicas">
                                 
                                 <div className="opcionesFrutas">

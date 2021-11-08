@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { faBorderNone } from "@fortawesome/free-solid-svg-icons";
+
 
 export const Button= styled.button`
     background: #0ac763;

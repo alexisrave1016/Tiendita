@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect} from 'react'
 import { Button } from './Disenos'
 import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'

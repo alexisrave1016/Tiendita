@@ -2,7 +2,6 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect} from 'react'
 import Card from '../components/Card'
-import { Button, LinkRuta } from '../components/Disenos'
 import { Navbar } from '../components/Navbar'
 
 

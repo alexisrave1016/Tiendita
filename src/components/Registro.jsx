@@ -4,9 +4,13 @@ import { LinkRuta } from './Disenos';
 import { useForm } from '../hooks/useForm';
 import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../actions/actionRegister';
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { useHistory } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 export const Registro = () => {
 
+    let history = useHistory();
     const dispatch = useDispatch()
 
     const [ values, handleInputChange]= useForm({
@@ -20,7 +24,23 @@ export const Registro = () => {
 
     const handleRegistro=e=>{
         e.preventDefault();
-        dispatch(registroEmailPasswordNombre(email,pass1,nombre))
+        const auth = getAuth()
+        createUserWithEmailAndPassword(auth, email, pass1)
+        .then(({user})=>{
+          history.push('/login')
+        })
+        .catch(e=>{
+            console.log(e)
+            Swal.fire(
+                { title:`${email}`,
+                 text: 'Ya esta registrado',
+                 icon: 'error',
+                 confirmButtonText:'Confirmar'
+             }
+             )
+            // meter modal que ay esta registrado
+        })
+        
     }
     return (
         <div className="registro"> 

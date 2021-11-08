@@ -57,7 +57,7 @@ export const App = () => {
             </div>
              
         </div>
-        <LinkRuta to="/crudProducto"><Button>Agragar Producto</Button></LinkRuta>    
+        <Button>Agragar Producto</Button>    
         </div>
     )
 }

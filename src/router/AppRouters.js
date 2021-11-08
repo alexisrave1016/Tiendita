@@ -13,6 +13,7 @@ import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import { useDispatch } from "react-redux";
 import { loginEmailPassword } from "../actions/actionLogin";
 import { useEffect } from "react";
+import Carrito from "../components/Carrito";
 
 const AppRouters = () => {
     const [checking, setChecking] = useState(true)//valida q la sesion este activa
@@ -24,11 +25,12 @@ const AppRouters = () => {
         const auth= getAuth();
         onAuthStateChanged(auth, (user)=> {
             if(user?.uid){  
-                 dispatch(loginEmailPassword(user.uid, user.displayName));
+                //  dispatch(loginEmailPassword(user.uid, user.displayName));
                 setIsLoggedIn(true);
             }else{
                 setIsLoggedIn(false);
             }
+            console.log({user})
             setChecking(false);
         })
     }, [dispatch, setChecking, setIsLoggedIn])
@@ -64,6 +66,13 @@ const AppRouters = () => {
                     exact
                     path="/registro"   
                     component={Registro} 
+                    isAuthenticated={isLoggedIn}
+                    />
+
+                    <PublicRouter
+                    exact
+                    path="/carrito"
+                    component={Carrito}
                     isAuthenticated={isLoggedIn}
                     />
 

@@ -3,7 +3,6 @@ import { Button } from './Disenos'
 import Modal from '../components/Modal'
 import { useModal } from '../hooks/useModal'
 import '../styles/modalPintar.css'
-import { ProductoRelacionadoviveres } from './ProductoRelacionadoviveres'
 import { ProdutoRelacionadoFrutas } from './ProdutoRelacionadoFrutas'
 
 const Card = (props) => {
@@ -27,7 +26,7 @@ const Card = (props) => {
         <div className="container_card">
             <div className="card_productos">
                 <div className="img_producto">
-                    <img src={Imagen} alt="no disponible" srcset="" />
+                    <img className="imagenCard" src={Imagen} alt="no disponible" srcset="" />
                 </div>
                 <div className="contenido_productos">
               <span>$ {Precio}</span> 

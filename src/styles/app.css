@@ -45,3 +45,8 @@
     align-items: center;
     flex-direction: column;
 }
+
+.imagenCard{
+    width: 180px;
+    height: 200px;
+}

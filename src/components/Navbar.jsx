@@ -14,6 +14,7 @@ export const Navbar = () => {
                         <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
                         <h5> México City Marriott Reforma Hotel...</h5>
                     </div>
+                
                     <LinkRuta to="/login" >
                     <div className="perfil_login">
                         <img  className="img_logo" src="perfil.png" alt="no disponible" srcset="" />
@@ -23,11 +24,12 @@ export const Navbar = () => {
                    
 
 
-                    <div className="carrito">
+                    <LinkRuta to="/carrito"><div className="carrito">
                         <div className="carrito_logo">
                             <img className="img_logo" src="carrito-de-compras.png" alt="no disponible" srcset="" />
                         </div>
                     </div>
+                    </LinkRuta>
                 </div>
             </div>
             <div className="Navbar_inferior">

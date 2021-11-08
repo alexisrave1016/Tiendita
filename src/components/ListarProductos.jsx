@@ -38,7 +38,7 @@ export const ListarProductos = () => {
 
     
     return (
-        <div>
+        <div className="containerListarProducto">
              <Table striped bordered hover>
                 <thead>
                     <tr>

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'
 import { useForm } from '../hooks/useForm'
 import { fileUpload } from '../helpers/FileUpload'
-import { editarProductoSincrono, listProducto, registerProducto } from '../actions/actionProducto'
+import { listProducto, registerProducto } from '../actions/actionProducto'
 import { ListarProductos } from './ListarProductos'
 
 export const Productos = ({history}) => {
@@ -59,7 +59,7 @@ export const Productos = ({history}) => {
 
    
     return (
-        <div>
+        <div className="containerListar">
             <form onSubmit={handleRegistro}>
                 <h1>Producto</h1>
                 <div className="form-group">
@@ -131,7 +131,7 @@ export const Productos = ({history}) => {
                     <div>
                         <button className="btn btn-primary" type="button"> atras</button>
                     </div>
-                <Button>Cerrar sesion</Button>
+                <Button onClick={handleLogout}>Cerrar sesion</Button>
  
                 </div>
             </form>

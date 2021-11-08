@@ -3,6 +3,7 @@ import {loginReducers} from '../reducers/loginReducers'
 import { registerReducers } from "../reducers/registerReducers";
 import thunk from "redux-thunk";
 import { productosReducer } from "../reducers/productosReducer";
+import { carritoReducer } from "../reducers/carritoReducer";
 
 
 // esto combila los milwer
@@ -15,6 +16,7 @@ const reducers= combineReducers({
     login: loginReducers,
     register: registerReducers,
     producto: productosReducer,
+    carrito: carritoReducer
   
 
 })

@@ -8,5 +8,6 @@ export const typesProductos= {
     register: 'register',
     list:'list',
     eliminar: 'eliminar',
-    edit: 'edit'
+    edit: 'edit',
+    carrito: 'carrito'
 }

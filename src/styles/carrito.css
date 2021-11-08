@@ -1,0 +1,72 @@
+
+.containerCarrito{
+    background-color: #f7f7f5;
+}
+
+.tab{
+    margin-left: 10px;
+    width: 1330px;
+    border: 1px solid black;
+}
+
+.enca{
+    color: green;
+    font-size: 18px;
+    text-align: center;
+}
+
+.encab{
+    color: green;
+    font-size: 18px;
+    text-align: center;
+}
+
+.agregar{
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.compra{
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.signos{
+    border-radius: 5px;
+    margin-left: 30px;
+    width: 28px;
+    
+}
+
+.signo{
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.nompro{
+    color: black;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.precio{
+    color: black;
+    text-align: center;
+}
+
+.cantidad{
+    color: black;
+    text-align: center;
+}
+
+.total{
+    color: black;
+}
+
+.next{
+    margin-left: 10px;
+}
+

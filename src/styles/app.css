@@ -17,11 +17,7 @@
 .productos_pintar{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
- 
-    
+    overflow: scroll  
 }
 .container_card{
     width: 220px;

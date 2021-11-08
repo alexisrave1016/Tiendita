@@ -45,7 +45,7 @@ export const App = () => {
 
             <div className="productos_pintar">
                 {
-                    productos.map(item=>(
+                    productos.filter(producto=>producto.Tipo==="Fruta").map(item=>(
                         <Card 
                         key={item.titulo}
                         productos={productos}
@@ -55,9 +55,25 @@ export const App = () => {
                 }
 
             </div>
+            <span>
+                Mas Populares
+            </span>
+            <div className="productos_pintar">
+                {
+                    productos.filter(producto=>producto.Tipo==="Viveres").map(item=>(
+                        <Card 
+                        key={item.titulo}
+                        productos={productos}
+                        card={item}
+                        />
+                    ))
+                }
+
+            </div>
+            
              
         </div>
-        <Button>Agragar Producto</Button>    
+           
         </div>
     )
 }

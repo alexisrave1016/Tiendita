@@ -49,21 +49,20 @@ const Card = (props) => {
                             {Tipo==='Fruta'
                                 ? <div className="modalSeleccionCaracteristicas">
                                 
-                                <div className="opcionesFrutas">
-                                    <span className="titulo_selecion">Selecciona la madurez que deseas</span>
-                                <select className="selecionDeseada" name="madurez">
-                                    <option value="titulo">Por elegir</option>
-                                    <option value="valor1">Maduro (Para hoy)</option>
-                                    <option value="valor2">Normal (3-5 días)</option>
-                                    <option value="valor3">Verde (7 días)</option>
-                                </select>
+                                        <div className="opcionesFrutas">
+                                            <span className="titulo_selecion">Selecciona la madurez que deseas</span>
+                                            <select className="selecionDeseada" name="madurez">
+                                                <option value="titulo">Por elegir</option>
+                                                <option value="valor1">Maduro (Para hoy)</option>
+                                                <option value="valor2">Normal (3-5 días)</option>
+                                                <option value="valor3">Verde (7 días)</option>
+                                            </select>
+                                         </div>
+                                        <div className="modal_botones_agregar">
+                                            <button className="botonModificar">- 250 g + </button> 
+                                            <Button>Agregar</Button>
+                                        </div>
                                 </div>
-                                
-                                <div className="modal_botones_agregar">
-                                <button className="botonModificar">- 250 g + </button> 
-                                <Button>Agregar</Button>
-                                </div>
-                            </div>
                             :<Button>Agregar</Button>}
                            
                         </div>

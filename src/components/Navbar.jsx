@@ -1,14 +1,17 @@
 import React from 'react'
 import { LinkRuta} from './Disenos'
 
-export const Navbar = () => {
-   
-  
+export const Navbar = (props) => {
+    const{
+        productos
+    }=props
+    console.log('soy props de nav',props)
+    console.log('soy prodcutos a pintar',productos);
     return (
         <div className="Navbar_container">
             <div className="navbar_superior">
                 <div className="titulo">
-                    <h4>Tiendita</h4>
+                    <LinkRuta to="/portada"><h4>Tiendita</h4></LinkRuta>
                 </div>
                 <div className="ubicacion_carrito">
                     <div className="ubicacion">
@@ -17,8 +20,8 @@ export const Navbar = () => {
                     </div>
                     
                     <div className="perfil_login">
-                           <h5>Frutas</h5> 
-                           <h5>Viveres</h5>      
+                        <LinkRuta to="/viveresYfrutas"><h5 className="SelecionTipo">Frutas</h5> </LinkRuta> 
+                        <LinkRuta to="/viveresYfrutas"><h5 className="SelecionTipo">Viveres</h5> </LinkRuta>      
                     </div>
 
                     <LinkRuta to="/login" >

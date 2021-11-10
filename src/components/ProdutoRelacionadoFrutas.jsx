@@ -8,6 +8,7 @@ export const ProdutoRelacionadoFrutas = (props) => {
   const{
       productosTipo
   }=props
+  
     return (
         <div>
              <div className="productos_pintar_frutas">

@@ -13,6 +13,7 @@ import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
+import { SeleccionViveresFrutas } from "../components/seleccionViveresFrutas";
 
 const AppRouters = () => {
     const [checking, setChecking] = useState(true)//valida q la sesion este activa
@@ -50,6 +51,13 @@ const AppRouters = () => {
                     exact
                     path="/portada" 
                     component={App} 
+                    isAuthenticated={isLoggedIn}
+                    />
+
+                    <PublicRouter 
+                    exact
+                    path="/viveresYfrutas" 
+                    component={SeleccionViveresFrutas} 
                     isAuthenticated={isLoggedIn}
                     />
                     

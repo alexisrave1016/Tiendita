@@ -58,7 +58,7 @@ const Login = () => {
                         <button type="submit" variant="primary" className="login_button" onClick={handleLogin}>Continuar</button>
                         </form>
                         <button className="login_google" onClick={handleGoogle}> <img className="logo_google" src="https://res.cloudinary.com/dd01p9lb9/image/upload/v1632601095/sprint3/google-logo_cqfi6y.png" alt="" srcset="" /> Sign In Google </button>
-                        <button className="login_facebook" onClick={handleFacebook}><img className="logo_face" src="https://res.cloudinary.com/dd01p9lb9/image/upload/v1633317615/social-facebook-button-blue-icon_cqwfbz.png" alt="no disponible" srcset="" />Sign In Facebook</button>
+                        <button className="login_facebook" onClick={handleFacebook}><img className="logo_face" src="https://res.cloudinary.com/dd01p9lb9/image/upload/v1636559179/logo-facebook_yvwgc5.png" alt="no disponible" srcset="" />Sign In Facebook</button>
                         <p>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad de Tiendita.</p>
 
                     </div>

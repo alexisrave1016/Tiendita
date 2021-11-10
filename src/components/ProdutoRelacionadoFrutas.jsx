@@ -11,6 +11,7 @@ export const ProdutoRelacionadoFrutas = (props) => {
     return (
         <div>
              <div className="productos_pintar_frutas">
+                 <div className="scroolProductosRelacionados">
                 {
                     productosTipo.map(item=>(
                         <Card 
@@ -19,6 +20,7 @@ export const ProdutoRelacionadoFrutas = (props) => {
                         />
                     ))
                 }
+                </div>
 
             </div>
         </div>

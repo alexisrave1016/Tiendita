@@ -80,8 +80,12 @@
 }
 
 .productos_pintar_frutas{
+    width: 800px;
+    height: 220px;
+}
+
+.scroolProductosRelacionados{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    overflow: scroll ; 
 }

@@ -33,7 +33,7 @@ export const loginEmailPassword= (email,password)=>{
             
             console.log('bienvenido señor usuario')
             Swal.fire(
-               { title:`bienvenido ${user.displayName}` ,
+               { title:`bienvenido ${email}` ,
                 text: 'Que gusto tenerte en Tiendita',
                 icon: 'success',
                 confirmButtonText:'Confirmar'

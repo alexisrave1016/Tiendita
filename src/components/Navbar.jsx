@@ -2,6 +2,7 @@ import React from 'react'
 import { LinkRuta} from './Disenos'
 
 export const Navbar = () => {
+   
   
     return (
         <div className="Navbar_container">
@@ -14,7 +15,12 @@ export const Navbar = () => {
                         <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
                         <h5> México City Marriott Reforma Hotel...</h5>
                     </div>
-                
+                    
+                    <div className="perfil_login">
+                           <h5>Frutas</h5> 
+                           <h5>Viveres</h5>      
+                    </div>
+
                     <LinkRuta to="/login" >
                     <div className="perfil_login">
                         <img  className="img_logo" src="perfil.png" alt="no disponible" srcset="" />

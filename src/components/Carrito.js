@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { DeleteProCarro } from '../actions/actionCarrito';
+import { DeleteProCarro, eliminarCarrito } from '../actions/actionCarrito';
 import { Button, LinkRuta } from './Disenos';
 
 
@@ -11,6 +11,18 @@ const Carrito = () => {
     const [historyCarrito, setHistoryCarrito] = useState([])
     const [TotalCantidad, setTotalCantidad] = useState(0)
     
+    const eliminarItem=(id)=>{
+        let carritoAgregarFisico=JSON.parse(localStorage.getItem("carrito"))
+        historyCarrito.forEach((elem,i)=>{
+            if(elem.id===id){
+                carritoAgregarFisico.splice(i,1)
+                localStorage.setItem("carrito", JSON.stringify(carritoAgregarFisico))
+                setHistoryCarrito(carritoAgregarFisico)
+                
+            }
+        })
+        
+    }
 
     
     useEffect(() => {
@@ -52,7 +64,7 @@ const Carrito = () => {
                                         <td className="cantidad">{element.cantidad}</td>
                                         
                                         <td>
-                                            <Button className="btn btn-danger">Eliminar</Button>
+                                            <Button className="btn btn-danger" onClick={()=>eliminarItem(element.id)}>Eliminar</Button>
                                         </td>
 
                                     </tr>
@@ -62,11 +74,7 @@ const Carrito = () => {
                             ) :
                             <p>Datos no disponibles</p>
                     }
-                    <tfoot>
-                        <tr>
-                            <td>Total: {TotalCantidad}</td>
-                        </tr>
-                    </tfoot>
+                    
                     <tr>
                     <th colspan="4" scope="col" className="text-right total"
                     style={{color:"black"}}
@@ -74,7 +82,7 @@ const Carrito = () => {
                     <th scope="col">
                         <p id="total"
                          style={{color:"black"}}
-                        >{}total</p>
+                        >{TotalCantidad} Unidades</p>
                     </th>
                     <td></td>
                 </tr>

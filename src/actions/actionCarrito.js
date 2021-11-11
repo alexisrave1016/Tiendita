@@ -43,3 +43,16 @@ export const DeleteProCarro = (id) => {
         dispatch(ListarCar(uid))
     }
 }
+
+export const eliminarCarrito = (id, all = false) => {
+
+    return async (dispatch) => {
+    console.log(id, all);
+    if(all){
+        dispatch({type: typesProductos.remover_todo, payload:id})
+    } else{
+        dispatch({type: typesProductos.remover_uno, payload:id})
+    }
+    }
+    
+};

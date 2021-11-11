@@ -13,7 +13,8 @@ import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
-// import { SeleccionViveresFrutas } from "../components/seleccionViveresFrutas";
+import CarritoNuevo from "../components/CarritoNuevo";
+
 
 const AppRouters = () => {
     const [checking, setChecking] = useState(true)//valida q la sesion este activa
@@ -41,7 +42,7 @@ const AppRouters = () => {
             <img src="loading.png" alt="no disponible" />
             </div>
             
-            // <h1>Espere por Favor</h1>
+           
         )
     }
     return (
@@ -54,18 +55,18 @@ const AppRouters = () => {
                     isAuthenticated={isLoggedIn}
                     />
 
-                    {/* <PublicRouter 
-                    exact
-                    path="/viveresYfrutas" 
-                    component={SeleccionViveresFrutas} 
-                    isAuthenticated={isLoggedIn}
-                    />
-                     */}
-
+                
                     <PublicRouter 
                     exact
                     path="/login"   
                     component={Login} 
+                    isAuthenticated={isLoggedIn}
+                    />
+
+                    <PublicRouter 
+                    exact
+                    path="/carrito1"   
+                    component={CarritoNuevo} 
                     isAuthenticated={isLoggedIn}
                     />
 

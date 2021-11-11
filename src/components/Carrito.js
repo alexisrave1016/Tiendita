@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { DeleteProCarro } from '../actions/actionCarrito';
@@ -6,24 +6,30 @@ import { Button, LinkRuta } from './Disenos';
 
 
 
+
 const Carrito = () => {
-    const carrito = useSelector(state => state.carrito)
-    let prod = carrito.carrito?.producto
-    const dispatch = useDispatch();
-    let total= 0
-    prod?.forEach((element) => {
-       let subTotal= element.producto.newProducto.cantidad * element.producto.newProducto.precio * 1000 
-      total += subTotal
+    const [historyCarrito, setHistoryCarrito] = useState([])
+    const [TotalCantidad, setTotalCantidad] = useState(0)
+    
 
-    })
-
-
+    
+    useEffect(() => {
+        if(localStorage.getItem("carrito")){
+            let carritoAgregarFisico=JSON.parse(localStorage.getItem("carrito")),
+            initialStateCantidad = carritoAgregarFisico.reduce((acc, {cantidad}) => acc + cantidad, 0);
+            setHistoryCarrito(carritoAgregarFisico)
+            setTotalCantidad(initialStateCantidad)
+        }
+    }, [])
+    console.log(historyCarrito)
+    
+    
     return (
         <div className="containerCarrito">
               <Table striped bordered hover className="tab">
                 <thead>
                     <tr>
-                        <th></th>
+                        <th className="imagen">img</th>
                         <th className="encab">Producto</th>
                         <th className="enca">Precio</th>
                         <th className="enca">Cantidad</th>
@@ -32,22 +38,21 @@ const Carrito = () => {
 
                 </thead>
                 <tbody>
+                    
                     {
-                        (prod) ?
+                        (historyCarrito) ?
                             (
 
-                                prod.map((element, index) => (
+                                historyCarrito.map((element, index) => (
 
                                     <tr key={index}>
-                                        <td ><img src={element.producto.newProducto.img[0].response  } alt="" width="50px" /></td>
-                                        <td className="nompro">{element.producto.newProducto.nom}</td>
-                                        <td className="precio">$ {element.producto.newProducto.precio}</td>
-                                        <td className="cantidad">{element.producto.newProducto.cantidad}</td>
-                                        <td className="cantidad"> $ {element.producto.newProducto.cantidad * element.producto.newProducto.precio*1000}</td>
+                                        <td ><img src={element.Imagen} alt="" width="50px" /></td>
+                                        <td className="producto">{element.Producto}</td>
+                                        <td className="precio">$ {element.Precio}</td>
+                                        <td className="cantidad">{element.cantidad}</td>
+                                        
                                         <td>
-                                            <Button className="btn btn-danger"
-                                            onClick={() =>{dispatch(DeleteProCarro(element.id))}}
-                                      >Eliminar</Button>
+                                            <Button className="btn btn-danger">Eliminar</Button>
                                         </td>
 
                                     </tr>
@@ -57,6 +62,11 @@ const Carrito = () => {
                             ) :
                             <p>Datos no disponibles</p>
                     }
+                    <tfoot>
+                        <tr>
+                            <td>Total: {TotalCantidad}</td>
+                        </tr>
+                    </tfoot>
                     <tr>
                     <th colspan="4" scope="col" className="text-right total"
                     style={{color:"black"}}
@@ -64,7 +74,7 @@ const Carrito = () => {
                     <th scope="col">
                         <p id="total"
                          style={{color:"black"}}
-                        >{total}</p>
+                        >{}total</p>
                     </th>
                     <td></td>
                 </tr>

@@ -5,22 +5,50 @@ import { useModal } from '../hooks/useModal'
 import '../styles/modalPintar.css'
 import { ProdutoRelacionadoFrutas } from './ProdutoRelacionadoFrutas'
 
-const Card = (props) => {
 
+const Card = (props) => {
+// console.log('soy props inicio', props)
     const{
         id,
         Producto,
         Descripcion,
         Tipo,
         Precio,
+        cantidad,
         Imagen,
         }=props.card
+
+     
 
     const{
         productos
     }=props
 
     const [isOpenModal,openModal,closeModal]= useModal(false)
+    let carritoAgregar=[]
+    if(localStorage.getItem("carrito")){
+        carritoAgregar=JSON.parse(localStorage.getItem("carrito"))
+        
+    }
+    const agregarCarrito=(id)=>{
+        
+        if(carritoAgregar.length){
+            carritoAgregar.forEach(elem=>{
+                if(elem.id===id){elem.cantidad ++
+                }else{carritoAgregar.push(productos.find(elem=>elem.id===id))}
+            })
+
+        }else{
+            carritoAgregar.push(productos.find(elem=>elem.id===id))
+            carritoAgregar.forEach(elem=>{
+                elem.cantidad ++
+            })
+        }
+        
+        localStorage.setItem("carrito",JSON.stringify(carritoAgregar))
+        console.log(carritoAgregar)
+// console.log(productos.find(elem=>elem.id))
+    }
     
     return (
         <div className="container_card">
@@ -60,7 +88,7 @@ const Card = (props) => {
                                          </div>
                                         <div className="modal_botones_agregar">
                                             <button className="botonModificar">- 250 g + </button> 
-                                            <Button>Agregar</Button>
+                                            <Button onClick={()=>agregarCarrito(id)}>Agregar</Button>
                                         </div>
                                 </div>
                             :<Button>Agregar</Button>}

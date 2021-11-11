@@ -35,6 +35,12 @@ export const Navbar = (props) => {
                         </div>
                     </div>
                     </LinkRuta>
+                    <LinkRuta to="/carrito1"><div className="carrito">
+                        <div className="carrito_logo">
+                            <img className="img_logo" src="carrito-de-compras.png" alt="no disponible" srcset="" />
+                        </div>
+                    </div>
+                    </LinkRuta>
                 </div>
             </div>
             <div className="Navbar_inferior">

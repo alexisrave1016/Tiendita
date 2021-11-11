@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react'
-import { CardTitle } from 'reactstrap'
 import { TYPES } from '../actions/actionCarritoNuevo'
 import { shoppingInitialState, shoppingReducer } from '../reducers/shoppingReducer'
 import Articulos from './Articulos'
@@ -38,7 +37,7 @@ const CarritoNuevo = () => {
                     products.map((product)=>(<Articulos
                     key={product.id}
                     data={product}
-                    addToCart={addTocart }
+                    addToCart={addTocart}
                     />))
                 }
             </article>

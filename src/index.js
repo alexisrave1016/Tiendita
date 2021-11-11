@@ -9,14 +9,14 @@ import './styles/listarProductos.css'
 import AppRouters from './router/AppRouters';
 import {Provider} from 'react-redux'
 import {store} from './store/store'
-import CarritoNuevo from './components/CarritoNuevo';
+
 
 
 
 ReactDOM.render(
   <Provider store={store}>
-  {/* <AppRouters/> */}
-  <CarritoNuevo/>
+  <AppRouters/>
+  
   </Provider>,
   document.getElementById('root')
 );

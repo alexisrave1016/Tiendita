@@ -1,6 +1,6 @@
 const CarrItem = ({data,delFromCart}) => {
     let{id,name,price,quantity}= data;
-
+console.log('soy eliminar', delFromCart)
     return (
         <div style={{}}>
             <h4>{name}</h4>

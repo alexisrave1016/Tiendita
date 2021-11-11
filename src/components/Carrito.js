@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
-import { DeleteProCarro, eliminarCarrito } from '../actions/actionCarrito';
 import { Button, LinkRuta } from './Disenos';
 
 

@@ -7,7 +7,7 @@ import { ProdutoRelacionadoFrutas } from "./ProdutoRelacionadoFrutas";
 
 const Card = (props) => {
   // console.log('soy props inicio', props)
-  const { id, Producto, Descripcion, Tipo, Precio, cantidad, Imagen } =
+  const { id, Producto, Descripcion, Tipo, Precio, Imagen } =
     props.card;
 
   const { productos } = props;

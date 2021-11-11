@@ -2,11 +2,7 @@ import React from 'react'
 import { LinkRuta} from './Disenos'
 
 export const Navbar = (props) => {
-    const{
-        productos
-    }=props
-    console.log('soy props de nav',props)
-    console.log('soy prodcutos a pintar',productos);
+   
     return (
         <div className="Navbar_container">
             <div className="navbar_superior">

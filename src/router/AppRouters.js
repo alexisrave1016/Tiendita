@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
 import CarritoNuevo from "../components/CarritoNuevo";
+import { SeleccionViveresFrutas } from "../components/SeleccionViveresFrutas";
 
 
 const AppRouters = () => {
@@ -62,6 +63,14 @@ const AppRouters = () => {
                     component={Login} 
                     isAuthenticated={isLoggedIn}
                     />
+
+<PublicRouter 
+                    exact
+                    path="/viveresYfrutas"   
+                    component={SeleccionViveresFrutas} 
+                    isAuthenticated={isLoggedIn}
+                    />
+
 
                     <PublicRouter 
                     exact

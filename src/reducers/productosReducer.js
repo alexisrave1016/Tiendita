@@ -33,7 +33,11 @@ export const productosReducer= (state= initialState, action) => {
                 ...state, //mirar si
                 productos: [action.payload]
 
-                }            
+                }  
+        case typesProductos.productos:
+            return{
+                productos:[action.payload]
+            }                 
     
         default:
             return state

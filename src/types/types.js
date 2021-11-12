@@ -14,5 +14,6 @@ export const typesProductos= {
     remover_uno: 'remover_uno',
     remover_todo: 'remover_todo',
     limpiar_carrito: 'limpiar_carrito',
+    productos:'productos'
     
 }

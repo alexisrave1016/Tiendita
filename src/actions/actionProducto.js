@@ -4,6 +4,13 @@ import { addDoc, collection, getDocs, query, where, doc, deleteDoc ,updateDoc} f
 import Swal from "sweetalert2";
 import { LoadProducto } from "../helpers/LoadProducto";
 
+export const productosTotales= (producto)=>({
+    type: typesProductos.productos,
+        payload:{
+        producto
+    }
+})
+
 export const editar = (producto) => {
     return async (dispatch, getSate) => {
         const id= getSate().login.id;

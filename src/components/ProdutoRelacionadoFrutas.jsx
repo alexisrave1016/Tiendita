@@ -6,7 +6,7 @@ import Card from '../components/Card'
 
 export const ProdutoRelacionadoFrutas = (props) => {
   const{
-      productosTipo
+      productosTipo,productos,handleOnClick
   }=props
   
     return (
@@ -17,7 +17,9 @@ export const ProdutoRelacionadoFrutas = (props) => {
                     productosTipo.map(item=>(
                         <Card 
                         key={item.titulo}
+                        productos={productos}
                         card={item}
+                        handleOnClick={handleOnClick}
                         />
                     ))
                 }

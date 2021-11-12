@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useState } from 'react'
 import { TYPES } from '../actions/actionCarritoNuevo'
 import { shoppingInitialState, shoppingReducer } from '../reducers/shoppingReducer'
 import Articulos from './Articulos'
@@ -9,6 +9,8 @@ const CarritoNuevo = () => {
     
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState)
     const{products,cart}=state
+    const [selec, setSelec] = useState('')
+    
  
     const addTocart=(id)=>{
         // console.log(id)

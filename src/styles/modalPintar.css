@@ -4,18 +4,23 @@
 }
 .modalProductoSeleccionado{
     display: flex;
-    justify-content: space-evenly;
+    width: 760px;
+    height: 280px;
+    margin-bottom: 10px;
 }
 .modalDescripcion{
     display: flex;
     flex-direction: column;
+    width: 300px;
+    height: 280px;
 }
 .modalSeleccionCaracteristicas{
     display: flex;
     flex-direction: column;
 }
 .modalImagenProducto{
-    width: 60%;
+    min-width: 200px;
+    max-width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +68,7 @@
 }
 .imagenProducto{
     width: 250px;
-    height: 250px;
+    height: 230px;
 }
 .opcionesFrutas{
     display: flex;
@@ -72,6 +77,8 @@
 .modal_productos_relacionados{
     display: flex;
     flex-direction: column;
+    height: 170px;
+    width: 600px;
 
 }
 .productosRelacionasdosMostrar{

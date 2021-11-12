@@ -42,24 +42,27 @@ export const App = () => {
             <Navbar />
             
             <div className="productos_container">
-                <span>
-                    Ofertas
-                </span>
+                    <div className="oferta">
+                        <span className="tituloCabezera">
+                            Ofertas
+                        </span>
 
-                <div className="productos_pintar">
-                    {
-                        productos.filter(producto=>producto.Tipo==="Fruta").map(item=>(
-                            <Card 
-                            handleOnClick={selectProd}
-                            key={item.titulo}
-                            productos={productos}
-                            card={item}
-                            />
-                        ))
-                    }
+                        <div className="productos_pintar">
+                        {
+                            productos.filter(producto=>producto.Tipo==="Fruta").map(item=>(
+                                <Card 
+                                handleOnClick={selectProd}
+                                key={item.titulo}
+                                productos={productos}
+                                card={item}
+                                />
+                            ))
+                        }
 
-                </div>
-                <span>
+                        </div>
+                    </div>
+                    <div className="populares">
+                    <span className="tituloCabezera">
                     Mas Populares
                 </span>
                 <div className="productos_pintar">
@@ -75,6 +78,9 @@ export const App = () => {
                     }
 
                 </div>
+
+            </div>
+                
             
              
             </div>

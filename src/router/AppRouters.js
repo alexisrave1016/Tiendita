@@ -13,7 +13,6 @@ import { getAuth, onAuthStateChanged } from "@firebase/auth";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
-import CarritoNuevo from "../components/CarritoNuevo";
 import { SeleccionViveresFrutas } from "../components/SeleccionViveresFrutas";
 
 
@@ -71,13 +70,6 @@ const AppRouters = () => {
                     isAuthenticated={isLoggedIn}
                     />
 
-
-                    <PublicRouter 
-                    exact
-                    path="/carrito1"   
-                    component={CarritoNuevo} 
-                    isAuthenticated={isLoggedIn}
-                    />
 
                     <PublicRouter
                     exact

@@ -19,9 +19,9 @@
 
 .modal-container{
     position: relative;
-    padding: 1rem;
+    padding: 0rem 2rem;
     width: 700px;
-    height: 680px;
+    height: 750px;
     overflow-y: auto;
     background-color: #f7f7f5;
     border-radius: 10px;
@@ -31,12 +31,20 @@
 
 .modal-close{
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 1rem;
+    right: 1rem;
     color: white;
     background-color: black;
     border-radius: 50%;
     padding:  5px 5px;
 
 
+}
+
+.displayCantidad{
+    width: 30px;
+    height: 30px;
+    top: 20rem;
+    right: 7rem;
+    background-color: yellowgreen;
 }

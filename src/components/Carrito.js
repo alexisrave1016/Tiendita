@@ -22,7 +22,6 @@ const Carrito = () => {
         
     }
 
-    
     useEffect(() => {
         if(localStorage.getItem("carrito")){
             let carritoAgregarFisico=JSON.parse(localStorage.getItem("carrito")),
@@ -31,8 +30,6 @@ const Carrito = () => {
             setTotalCantidad(initialStateCantidad)
         }
     }, [])
-    console.log(historyCarrito)
-    
     
     return (
         <div className="containerCarrito">

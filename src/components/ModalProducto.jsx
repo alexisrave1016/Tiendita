@@ -3,40 +3,63 @@ import { Button } from "./Disenos";
 import Modal from "../components/Modal";
 import "../styles/modalPintar.css";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
-const ModalProducto = (props,) => {
+const ModalProducto = (props) => {
 
     const{isOpenModal,producto,productos,closeModal,onClick}=props
-    const {id,Imagen,Precio,Producto,Tipo,Descripcion}=producto
+    const {id,Imagen,Precio,Producto,Tipo,Descripcion,cantidad}=producto
     
      let carritoAgregar = [];
   if (localStorage.getItem("carrito")) {
     carritoAgregar = JSON.parse(localStorage.getItem("carrito"));
   }
   const agregarCarrito = (id) => {
-    // debugger;
+
      
         const elemento= carritoAgregar.find(elem=>elem.id===id)
         if(elemento){
         
                     elemento.cantidad++; 
+                    Swal.fire(
+                      {
+                     title:`Productos selecionados ${elemento.cantidad}`,
+                      // title:`Producto añadido correctamente`,
+                      
+                        text: `${elemento.Producto}`,
+                       icon: 'success',
+                       confirmButtonText:'Confirmar'
+                   })
     } else {
         const elemento= productos.find((elem) => elem.id === id)
         carritoAgregar.push(elemento)
         elemento.cantidad++;
+        Swal.fire(
+          {
+            //  title:`Productos selecionados ${elemento.cantidad}`,
+          title:`${elemento.Producto} añadido correctamente`,
+           icon: 'success',
+           confirmButtonText:'Confirmar'
+       })
         }
 
     localStorage.setItem("carrito", JSON.stringify(carritoAgregar));
-    console.log(carritoAgregar);
-    // console.log(productos.find(elem=>elem.id))
+    
   };
   useEffect(() => {
-     
+    
   }, [])
+  
+  console.log('soy carrito fuera',carritoAgregar.find(item=> item.cantidad===cantidad));
+    console.log('soy cantidad del modal nuevos',carritoAgregar )
+    console.log('soy carritoAgregar',carritoAgregar.forEach(elem => {
+    console.log(elem.cantidad);
+    }));
+    console.log('prueba final',agregarCarrito);
 
     return (
         
-           <Modal isOpen={isOpenModal} closeModal={closeModal}>
+           <Modal isOpen={isOpenModal} closeModal={closeModal} cantidad={cantidad}>
         <div className="modalContainerTotal">
           <div className="modalProductoSeleccionado">
             <div className="modalImagenProducto">
@@ -67,16 +90,16 @@ const ModalProducto = (props,) => {
                   </div>
                   <div className="modal_botones_agregar">
                     <button className="botonModificar">- 250 g + </button>
-                    <Button onClick={() => agregarCarrito(id)}>Agregar</Button>
+                    <Button onClick={()=>agregarCarrito(id)}>Agregar</Button>
                   </div>
                 </div>
               ) : (
-                <Button onClick={() => agregarCarrito(id)}>Agregar</Button>
+                <Button onClick={()=>agregarCarrito(id)}>Agregar</Button>
               )}
             </div>
           </div>
           <div className="modal_productos_relacionados">
-            <h5>Productos Relacionados</h5>
+            <h5 className="tituloCabezera">Productos Relacionados</h5>
             <div className="productosRelacionasdosMostrar">
               {productos?.length > 0 && (
                 <ProdutoRelacionadoFrutas

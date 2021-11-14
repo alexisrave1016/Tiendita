@@ -14,6 +14,8 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Carrito from "../components/Carrito";
 import { SeleccionViveresFrutas } from "../components/SeleccionViveresFrutas";
+import { Puff } from "react-loading-icons";
+
 
 
 const AppRouters = () => {
@@ -39,7 +41,8 @@ const AppRouters = () => {
         return(
             <div className="swal2-loading">
                 <h1>Espere ...</h1>
-            <img src="loading.png" alt="no disponible" />
+            <Puff stroke="#0ac763" strokeOpacity={.125} speed={.75} width='200px' height='200px'/>
+            
             </div>
             
            

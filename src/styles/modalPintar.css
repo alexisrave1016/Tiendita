@@ -7,6 +7,7 @@
     width: 760px;
     height: 280px;
     margin-bottom: 10px;
+    
 }
 .modalDescripcion{
     display: flex;
@@ -69,6 +70,7 @@
 .imagenProducto{
     width: 250px;
     height: 230px;
+    margin-right: 20px;
 }
 .opcionesFrutas{
     display: flex;
@@ -77,8 +79,8 @@
 .modal_productos_relacionados{
     display: flex;
     flex-direction: column;
-    height: 170px;
-    width: 600px;
+    margin-top: 40px;
+    width: 250px;
 
 }
 .productosRelacionasdosMostrar{

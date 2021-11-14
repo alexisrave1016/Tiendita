@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react'
-import { Button } from './Disenos'
+import { Button, LinkRuta } from './Disenos'
 import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'
 import { useForm } from '../hooks/useForm'
@@ -128,9 +128,6 @@ export const Productos = ({history}) => {
                     </div>
                     <button className="btn btn-success" type="submit">Guardar</button>
  
-                    <div>
-                        <button className="btn btn-primary" type="button"> atras</button>
-                    </div>
                 <Button onClick={handleLogout}>Cerrar sesion</Button>
  
                 </div>

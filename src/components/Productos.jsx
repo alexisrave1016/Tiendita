@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react'
-import { Button, LinkRuta } from './Disenos'
+import { Button } from './Disenos'
 import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'
 import { useForm } from '../hooks/useForm'

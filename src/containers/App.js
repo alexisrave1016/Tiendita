@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import { Navbar } from '../components/Navbar'
 import {useModal} from '../hooks/useModal'
 import ModalProducto from "../components/ModalProducto";
-import { SeleccionViveresFrutas } from '../components/SeleccionViveresFrutas'
+
 
 const url='https://api-alexisrave-anime.herokuapp.com/tienda'
 

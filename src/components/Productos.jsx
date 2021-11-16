@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react'
-import { Button } from './Disenos'
+import { Button, LinkRuta } from './Disenos'
 import { useDispatch } from 'react-redux'
 import { logout } from '../actions/actionLogin'
 import { useForm } from '../hooks/useForm'
@@ -60,6 +60,7 @@ export const Productos = ({history}) => {
    
     return (
         <div className="containerListar">
+            <LinkRuta to="/portada"><img  className="text-center m-auto" src="Tiendita.png" alt="" srcset="" /></LinkRuta>
             <form onSubmit={handleRegistro}>
                 <h1>Producto</h1>
                 <div className="form-group">

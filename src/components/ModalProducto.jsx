@@ -9,6 +9,8 @@ const ModalProducto = (props) => {
 
     const{isOpenModal,producto,productos,closeModal,onClick}=props
     const {id,Imagen,Precio,Producto,Tipo,Descripcion,cantidad}=producto
+
+    console.log('aaaaaaaa',producto)
     
      let carritoAgregar = [];
   if (localStorage.getItem("carrito")) {
@@ -50,13 +52,6 @@ const ModalProducto = (props) => {
     
   }, [])
   
-  console.log('soy carrito fuera',carritoAgregar.find(item=> item.cantidad===cantidad));
-    console.log('soy cantidad del modal nuevos',carritoAgregar )
-    console.log('soy carritoAgregar',carritoAgregar.forEach(elem => {
-    console.log(elem.cantidad);
-    }));
-    console.log('prueba final',agregarCarrito);
-
     return (
         
            <Modal isOpen={isOpenModal} closeModal={closeModal} cantidad={cantidad}>

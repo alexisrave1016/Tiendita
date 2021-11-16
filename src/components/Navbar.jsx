@@ -3,17 +3,6 @@ import { LinkRuta} from './Disenos'
 
 export const Navbar = ({selec, productosFrutas}) => {
     
-    // const productosFrutasFiltrar=()=>{
-    //     let mostrarFrutas= selec.filter(elem=>{
-    //         if(elem.Tipo==='Fruta'){
-            
-    //             return elem
-    //         }
-    //     })
-    //     ;
-    //     productosFrutas(mostrarFrutas)
-    // }
-    
     return (
         <div className="Navbar_container">
             <div className="navbar_superior">
@@ -27,8 +16,8 @@ export const Navbar = ({selec, productosFrutas}) => {
                     </div>
                     
                     <div className="perfil_login">
-                        <LinkRuta to="/viveresYfrutas" ><h5 className="SelecionTipo">Frutas</h5> </LinkRuta> 
-                        <LinkRuta to="/viveresYfrutas"><h5 className="SelecionTipo">Viveres</h5> </LinkRuta>      
+                        <LinkRuta to="/frutas" ><h5 className="SelecionTipo">Frutas</h5> </LinkRuta> 
+                        <LinkRuta to="/viveres"><h5 className="SelecionTipo">Viveres</h5> </LinkRuta>      
                     </div>
 
                     <LinkRuta to="/login" >

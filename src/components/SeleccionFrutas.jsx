@@ -8,8 +8,8 @@ import { Navbar } from './Navbar'
 const url='https://api-alexisrave-anime.herokuapp.com/tienda'
 
 
-export const SeleccionViveresFrutas = () => {
-    
+
+const SeleccionFrutas = () => {
     const [viveres, setViveres] = useState([])
     const peticionesGet= async()=>{
         await axios.get(url)
@@ -25,14 +25,13 @@ export const SeleccionViveresFrutas = () => {
        
         peticionesGet()
     }, [])
-    
     return (
         
         <div className="containerViveresFrutas">
             <Navbar/>
             <div className="pintar_viveresYfrutasSel">
                     {
-                        viveres.filter(producto=>producto.Tipo==="Viveres").map(item=>(
+                        viveres.filter(producto=>producto.Tipo==="Fruta").map(item=>(
                             <Card 
                             key={item.titulo}
                             card={item}
@@ -45,3 +44,5 @@ export const SeleccionViveresFrutas = () => {
         </div>
     )
 }
+
+export default SeleccionFrutas

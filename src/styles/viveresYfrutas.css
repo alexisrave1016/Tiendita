@@ -1,0 +1,11 @@
+.pintar_viveresYfrutasSel{
+    background-color: #f7f7f5;
+    width: 1000px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    
+    
+
+
+}

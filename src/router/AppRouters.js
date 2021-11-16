@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import Carrito from "../components/Carrito";
 import { SeleccionViveresFrutas } from "../components/SeleccionViveresFrutas";
 import { Puff } from "react-loading-icons";
+import SeleccionFrutas from "../components/SeleccionFrutas";
 
 
 
@@ -65,13 +66,21 @@ const AppRouters = () => {
                     component={Login} 
                     isAuthenticated={isLoggedIn}
                     />
-
-<PublicRouter 
+                    
+                    <PublicRouter 
                     exact
-                    path="/viveresYfrutas"   
+                    path="/viveres"   
                     component={SeleccionViveresFrutas} 
                     isAuthenticated={isLoggedIn}
                     />
+                    
+                    <PublicRouter 
+                    exact
+                    path="/frutas"   
+                    component={SeleccionFrutas} 
+                    isAuthenticated={isLoggedIn}
+                    />
+                    
 
 
                     <PublicRouter

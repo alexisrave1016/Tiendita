@@ -6,6 +6,7 @@ import './styles/login.css'
 import './styles/registro.css'
 import './styles/carrito.css'
 import './styles/listarProductos.css'
+import './styles/viveresYfrutas.css'
 import AppRouters from './router/AppRouters';
 import {Provider} from 'react-redux'
 import {store} from './store/store'

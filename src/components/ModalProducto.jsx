@@ -10,7 +10,7 @@ const ModalProducto = (props) => {
     const{isOpenModal,producto,productos,closeModal,onClick}=props
     const {id,Imagen,Precio,Producto,Tipo,Descripcion,cantidad}=producto
 
-    console.log('aaaaaaaa',producto)
+    
     
      let carritoAgregar = [];
   if (localStorage.getItem("carrito")) {

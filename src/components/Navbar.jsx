@@ -1,8 +1,9 @@
 import React from 'react'
+import Buscador from './Buscador'
 import { LinkRuta} from './Disenos'
 
 export const Navbar = ({selec, productosFrutas}) => {
-    
+   
     return (
         <div className="Navbar_container">
             <div className="navbar_superior">
@@ -10,10 +11,7 @@ export const Navbar = ({selec, productosFrutas}) => {
                     <LinkRuta to="/portada"><h4>Tiendita</h4></LinkRuta>
                 </div>
                 <div className="ubicacion_carrito">
-                    <div className="ubicacion">
-                        <img className="img_logo" src="placeholder.png" alt="no disponible" srcset="" />
-                        <h5> México City Marriott Reforma Hotel...</h5>
-                    </div>
+                    <Buscador />
                     
                     <div className="perfil_login">
                         <LinkRuta to="/frutas" ><h5 className="SelecionTipo">Frutas</h5> </LinkRuta> 

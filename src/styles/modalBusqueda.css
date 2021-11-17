@@ -1,0 +1,28 @@
+.modalBusquedaContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.contaienerModalBuscador{
+    display: flex;
+    flex-direction: column;
+}
+.formularioBuscador{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonBuscar{
+    width: 100% !important ;
+    
+}
+.inputCiudades{
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.tituloBuscador{
+    font-weight: 100;
+    font-size: 12px;
+}

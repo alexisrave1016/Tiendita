@@ -15,6 +15,7 @@ export const App = () => {
     const [producto,setProducto]= useState({id:'',Imagen:'',Precio:'',Producto:'',Tipo:'',Descripcion:''})
     const [isOpenModal, openModal, closeModal] = useModal(false);
     
+    
     const peticionesGet= async()=>{
         await axios.get(url)
         .then(resp=>{

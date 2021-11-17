@@ -60,6 +60,9 @@ body{  min-height: 100vh;
 .ubicacion{
     display: flex;
     align-items: center;
+    border:none;
+    background-color: white;
+    cursor: pointer;
 }
 .perfil_login{
     display: flex;
@@ -80,3 +83,4 @@ body{  min-height: 100vh;
 .SelecionTipo{
     margin: 0px 10px;
 }
+
